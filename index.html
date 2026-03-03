@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technoplus Solutions | Engineering Consultancy</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Brand Colors & Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#dc2626',      /* Tailwind red-600 */
+                            darkred: '#b91c1c',  /* Tailwind red-700 */
+                            slate: '#1E293B',    /* Tailwind slate-800 */
+                            charcoal: '#334155', /* Tailwind slate-700 */
+                            light: '#F8F9FA'     /* Clean off-white background */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Utility overriding if needed -->
+    <style>
+        /* Smooth scrolling padding adjustment for sticky header */
+        html {
+            scroll-padding-top: 5rem;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-brand-charcoal bg-brand-light antialiased">
+
+    <!-- ============================================== -->
+    <!-- HEADER / NAVIGATION SECTION                    -->
+    <!-- ============================================== -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo Space -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="flex items-center">
+                        <!-- REPLACE WITH ACTUAL LOGO: Change src="./assets/logo.png" to your logo path -->
+                        <img src="./assets/final tecnoplus logo.jpg" alt="Technoplus Solutions Logo"
+                            class="h-16 md:h-20 w-auto object-contain"
+                            onerror="this.src='https://via.placeholder.com/150x40?text=Logo+Space'">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home"
+                        class="text-brand-charcoal hover:text-brand-red font-medium transition-colors duration-200">Home</a>
+                    <a href="#about"
+                        class="text-brand-charcoal hover:text-brand-red font-medium transition-colors duration-200">About
+                        Us</a>
+                    <a href="#services"
+                        class="text-brand-charcoal hover:text-brand-red font-medium transition-colors duration-200">Services</a>
+                    <a href="#segments"
+                        class="text-brand-charcoal hover:text-brand-red font-medium transition-colors duration-200">Industries</a>
+                    <a href="#contact"
+                        class="text-brand-charcoal hover:text-brand-red font-medium transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button Icon -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-brand-charcoal hover:text-brand-red focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================== -->
+    <!-- HERO SECTION                                   -->
+    <!-- ============================================== -->
+    <section id="home" class="relative bg-brand-slate h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <!-- Background Image area -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <!-- REPLACE HERO IMAGE: Update src with the actual background image you want -->
+            <img src="./assets/handshake.png" alt="Corporate Header" class="w-full h-full object-cover object-center">
+
+            <!-- Overlays for readability and subtle brand color tint -->
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-slate/90 to-brand-slate/40"></div>
+            <div class="absolute inset-0 bg-brand-red/10 mix-blend-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
+            <h1
+                class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-lg">
+                Extending Your Reach into New Markets...
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light max-w-3xl mx-auto">
+                Professionals with more than 30 years’ experience.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- ABOUT US SECTION                               -->
+    <!-- ============================================== -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+                <!-- Left Column (Text Content) -->
+                <div class="lg:pr-12 xl:pr-16 flex flex-col justify-center h-full">
+                    <span class="text-brand-red text-2xl font-bold mb-2 block tracking-tight">About Us</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-8">
+                        Your Catalyst for Market Expansion
+                    </h2>
+
+                    <div class="text-lg text-slate-600 font-light leading-relaxed mb-8">
+                        <p class="mb-6">
+                            With over three decades of industry experience, <strong class="font-semibold text-slate-900">Technoplus Solutions</strong> stands as a trusted partner in driving business growth and strategic expansion within the engineering and industrial sectors.
+                        </p>
+                        <p class="mb-6">
+                            Headquartered in <strong class="font-semibold text-slate-900">Pune — one of India's leading engineering hubs</strong> — we bring deep market insight, strong industry relationships, and a global outlook. Our network of associates spans across India as well as Europe, Africa, and the Middle East, enabling us to support businesses in expanding their reach beyond boundaries.
+                        </p>
+                        <p class="mb-6">
+                            We specialize in creating meaningful connections — bridging organizations with new markets, strategic partnerships, and growth opportunities. Our strength lies in understanding industry dynamics and positioning businesses for sustainable success.
+                        </p>
+                        <p>
+                            At Technoplus Solutions, we don't just support expansion — we enable transformation.
+                        </p>
+                    </div>
+
+                    <!-- Quick Stats Row -->
+                    <div class="border-t border-gray-200 pt-6 mt-2 flex flex-wrap gap-10">
+                        <div>
+                            <div class="text-4xl font-extrabold text-brand-red mb-1">30+</div>
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-bold">Years Experience
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-extrabold text-brand-red mb-1">Global</div>
+                            <div class="text-xs uppercase tracking-wider text-slate-500 font-bold">Network & Associates
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Visual Context & Depth) -->
+                <div class="relative mt-12 lg:mt-0">
+                    <!-- Overlapping Accent Box (Background) -->
+                    <div
+                        class="absolute -top-6 -right-6 lg:-top-10 lg:-right-10 w-full h-full border-2 border-brand-red/30 rounded-xl bg-gradient-to-br from-brand-red/5 to-transparent -z-10">
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -left-6 lg:-bottom-10 lg:-left-10 w-2/3 h-2/3 bg-brand-slate rounded-xl -z-10">
+                    </div>
+
+                    <!-- Main Image Wrapper -->
+                    <div
+                        class="relative h-64 sm:h-80 md:h-96 lg:h-full min-h-[400px] xl:min-h-[500px] rounded-xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-white">
+                        <img src="./assets/techno_aboutus.png" alt="Global Engineering Network"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <!-- Subtle overlay to match brand red/blue -->
+                        <div class="absolute inset-0 bg-brand-slate/10 mix-blend-multiply"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SERVICES SECTION                               -->
+    <!-- ============================================== -->
+    <section id="services" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <!-- Premium Header Hierarchy -->
+                <span class="text-brand-red text-2xl font-bold mb-2 block tracking-tight">Services</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                    Comprehensive Engineering <br class="hidden sm:block" />& Market Solutions
+                </h2>
+            </div>
+
+            <!-- Bento Box Custom Grid (3 top, 2 wide bottom) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Market Expansion & Sales (Top 1) -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 relative overflow-hidden flex flex-col h-full">
+                    <!-- Hover Accent Border -->
+                    <div
+                        class="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 bg-white shadow-md border border-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red transition-colors duration-500 relative z-10">
+                        <i
+                            class="fa-solid fa-earth-asia text-3xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+
+                    <h3
+                        class="text-xl font-extrabold mb-4 text-slate-900 group-hover:text-brand-red transition-colors duration-300">
+                        Market Expansion & Sales</h3>
+                    <ul class="space-y-4 text-slate-600 font-light flex-grow">
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Sales, Business Development for Indian & South East Asian markets.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Representation of products.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Liasoning for new orders.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Brand Development & Visibility.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Marketing Strategy Formulation (Top 2) -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 relative overflow-hidden flex flex-col h-full">
+                    <div
+                        class="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 bg-white shadow-md border border-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red transition-colors duration-500 relative z-10">
+                        <i
+                            class="fa-solid fa-bullseye text-3xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+
+                    <h3
+                        class="text-xl font-extrabold mb-4 text-slate-900 group-hover:text-brand-red transition-colors duration-300">
+                        Marketing Strategy Formulation</h3>
+                    <ul class="space-y-4 text-slate-600 font-light flex-grow">
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Competitor analysis & Market Research.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Pricing Strategy & Go-to-Market Strategy.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Sales Network Development.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Identifying Technology / JV Partner (Top 3) -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 relative overflow-hidden flex flex-col h-full">
+                    <div
+                        class="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 bg-white shadow-md border border-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red transition-colors duration-500 relative z-10">
+                        <i
+                            class="fa-solid fa-handshake text-3xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+
+                    <h3
+                        class="text-xl font-extrabold mb-4 text-slate-900 group-hover:text-brand-red transition-colors duration-300">
+                        Identifying Technology / JV Partner</h3>
+                    <ul class="space-y-4 text-slate-600 font-light flex-grow">
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Identifying and matching technology partner companies.</span>
+                        </li>
+                        <li class="flex items-start group/item">
+                            <i
+                                class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                            <span>Due diligence of prospective companies.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bottom Row Wrapper specifically for Cards 4 & 5 to be centered -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:col-span-3 lg:w-[66.666%] lg:mx-auto">
+                    <!-- Card 4: Operation Support & Manufacturing (Centered Bottom 1) -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 relative overflow-hidden flex flex-col h-full">
+                        <div
+                            class="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full">
+                        </div>
+
+                        <div
+                            class="w-16 h-16 bg-white shadow-md border border-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red transition-colors duration-500 relative z-10">
+                            <i
+                                class="fa-solid fa-gears text-3xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+
+                        <h3
+                            class="text-xl font-extrabold mb-4 text-slate-900 group-hover:text-brand-red transition-colors duration-300">
+                            Operation Support & Manufacturing</h3>
+                        <ul class="space-y-4 text-slate-600 font-light flex-grow">
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Manufacturing outsourcing.</span>
+                            </li>
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Vendor Selection and Audit.</span>
+                            </li>
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Acting as your sourcing office for cost-effective, quality purchase.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 5: Engineering & Project Management (Centered Bottom 2) -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group hover:-translate-y-1 relative overflow-hidden flex flex-col h-full">
+                        <div
+                            class="absolute bottom-0 left-0 h-1 w-0 bg-brand-red transition-all duration-500 group-hover:w-full">
+                        </div>
+
+                        <div
+                            class="w-16 h-16 bg-white shadow-md border border-gray-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-red transition-colors duration-500 relative z-10">
+                            <i
+                                class="fa-solid fa-helmet-safety text-3xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+
+                        <h3
+                            class="text-xl font-extrabold mb-4 text-slate-900 group-hover:text-brand-red transition-colors duration-300">
+                            Engineering & Project Management</h3>
+                        <ul class="space-y-4 text-slate-600 font-light flex-grow">
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Multi-Disciplinary Engineering (Mechanical, Civil, Electrical).</span>
+                            </li>
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Turn-key Project Management.</span>
+                            </li>
+                            <li class="flex items-start group/item">
+                                <i
+                                    class="fa-solid fa-check text-brand-red mt-1.5 mr-3 text-xs opacity-70 group-hover/item:translate-x-1 transition-transform duration-300"></i>
+                                <span>Acting as your extended service office.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- EXPERIENCE FUNCTIONS SECTION                   -->
+    <!-- ============================================== -->
+    <section class="py-12 bg-brand-slate relative overflow-hidden">
+        <!-- Abstract Decorations highlighting the deep slate -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-red/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-brand-red/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center mb-8">
+                        <!-- Premium Header Hierarchy -->
+                        <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
+                            30+ Years Experience in Various Functions
+                        </h2>
+                        <div class="w-20 h-1.5 bg-brand-red mx-auto text-center rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Box 1 -->
+                <div
+                    class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                        <i
+                            class="fa-solid fa-chart-line text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3
+                        class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                        Sales</h3>
+                </div>
+                <!-- Box 2 -->
+                <div
+                    class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                        <i
+                            class="fa-solid fa-handshake text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3
+                        class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                        Business Development</h3>
+                </div>
+                <!-- Box 3 -->
+                <div
+                    class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                        <i
+                            class="fa-solid fa-helmet-safety text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3
+                        class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                        Project Management</h3>
+                </div>
+                <!-- Box 4 -->
+                <div
+                    class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                        <i
+                            class="fa-solid fa-cart-shopping text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+                    <h3
+                        class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                        Procurement</h3>
+                </div>
+            </div>
+
+            <!-- EXPOSURE IN VARIOUS SEGMENTS (Dark Blue Extension) -->
+            <div id="segments" class="mt-12 border-t border-gray-700/50 pt-8 scroll-mt-24">
+                <div class="text-center mb-8">
+                    <!-- Premium Header Hierarchy -->
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
+                        Exposure in Various Segments
+                    </h2>
+                    <div class="w-20 h-1.5 bg-brand-red mx-auto text-center rounded-full mt-4"></div>
+                </div>
+
+                <!-- 5-Card Grid (Single Line on Large Screens) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
+                    <!-- Segment 1 -->
+                    <div
+                        class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                        <div
+                            class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                            <i
+                                class="fa-solid fa-fire text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3
+                            class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                            Boiler</h3>
+                    </div>
+                    <!-- Segment 2 -->
+                    <div
+                        class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                        <div
+                            class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                            <i
+                                class="fa-solid fa-bolt text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3
+                            class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                            Co-generation</h3>
+                    </div>
+                    <!-- Segment 3 -->
+                    <div
+                        class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                        <div
+                            class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                            <i
+                                class="fa-solid fa-droplet text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3
+                            class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                            Water Treatment</h3>
+                    </div>
+                    <!-- Segment 4 -->
+                    <div
+                        class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                        <div
+                            class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                            <i
+                                class="fa-solid fa-flask text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3
+                            class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300">
+                            Ethanol & Distillery</h3>
+                    </div>
+                    <!-- Segment 5 -->
+                    <div
+                        class="bg-[#243346] rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-700 text-center group hover:-translate-y-1">
+                        <div
+                            class="w-14 h-14 mx-auto bg-[#1a2533] shadow-md border border-gray-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand-red transition-colors duration-500">
+                            <i
+                                class="fa-solid fa-boxes-stacked text-2xl text-brand-red group-hover:text-white transition-colors duration-500"></i>
+                        </div>
+                        <h3
+                            class="text-lg font-extrabold text-white group-hover:text-brand-red transition-colors duration-300 leading-tight">
+                            Material Handling Systems</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FOOTER SECTION                                 -->
+    <!-- ============================================== -->
+    <footer class="bg-[#111827] text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="#home" class="inline-block mb-4">
+                        <img src="./assets/final tecnoplus logo.jpg" alt="Technoplus Solutions Logo"
+                            class="h-12 w-auto object-contain"
+                            onerror="this.src='https://via.placeholder.com/150x40?text=Technoplus'">
+                    </a>
+                    <p class="mb-4 text-sm font-light">Your catalyst for market expansion and engineering excellence. We
+                        bring 30+ years of professional experience to the table.</p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-lg">Quick Links</h4>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#home" class="hover:text-brand-red transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-red transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition-colors">Services</a></li>
+                        <li><a href="#segments" class="hover:text-brand-red transition-colors">Industries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Placeholder Contact Info -->
+                <div id="contact">
+                    <h4 class="text-white font-semibold mb-4 text-lg">Contact Us</h4>
+                    <ul class="space-y-3 text-sm font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-red"></i>
+                            <span>Pune, Maharashtra, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-red"></i>
+                            <!-- Update Email Here -->
+                            <a href="mailto:support@technoplussolutions.in"
+                                class="hover:text-brand-red transition-colors">support@technoplussolutions.in</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-red"></i>
+                            <!-- Update Phone Here -->
+                            <a href="tel:+91" class="hover:text-brand-red transition-colors">+91 9860100026</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-light">
+                <p>&copy; 2026 Technoplus Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
